@@ -1,0 +1,28 @@
+---
+export interface Props {
+  style: string;
+  alt: string;
+}
+
+import separator from "../assets/images/lbg-separator.svg";
+const { style, alt } = Astro.props;
+---
+
+<div class={style}>
+  <img src={separator} alt={alt} />
+</div>
+
+<style>
+  .app__separator-top {
+    @apply flex justify-center;
+  }
+
+  .app__separator-bottom {
+    @apply flex justify-center transform rotate-180;
+  }
+
+  .app__separator-top img,
+  .app__separator-bottom img {
+    @apply max-w-full max-h-full;
+  }
+</style>

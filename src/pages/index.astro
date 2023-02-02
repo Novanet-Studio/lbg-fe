@@ -1,0 +1,93 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+import AppSeparator from "../components/app-separator.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="top">
+      <div class="top__pattern">
+        <div class="top__wrapper">
+          <div class="top__logo">&nbsp;</div>
+          <div class="top__slogan">
+            <AppSeparator style="app__separator-top" alt="Separador" />
+            <p>Un rincón de Francia en Caracas</p>
+            <AppSeparator style="app__separator-bottom" alt="Separador" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <p class="bottom__title">Nuestro Sitio Web está en construcción</p>
+      <div class="separator">
+        <AppSeparator style="app__separator-top" alt="Separador inferior" />
+        <AppSeparator style="app__separator-bottom" alt="Separador superior" />
+      </div>
+      <p class="bottom__text">
+        Estamos preparando algo asombroso y emocionante para brindarte la mejor
+        experiencia.
+      </p>
+    </div>
+    <div class="bottom__rrss">
+			<a href="https://www.instagram.com/lebistrotgourmet_ccs/" target="_blank">
+      <Icon class="bottom__link" name="mdi:instagram" />
+		</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+	
+  .top {
+    @apply flex flex-col mx-auto bg-armyGreen px-12 pt-8 pb-8 box-content
+		<sm:(w-2/3);
+  }
+
+  .top__pattern {
+    @apply bg-patternBg bg-repeat;
+  }
+
+  .top__wrapper {
+    border-image: linear-gradient(#ba9211, #faefb1) 45;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2rem 0 2rem 0;
+  }
+
+  .top__logo {
+    @apply mx-auto bg-logo bg-auto bg-top bg-no-repeat bg-contain py-24
+		<sm:(w-102)
+		xl:(w-[48%]);
+  }
+
+  .top__slogan {
+    @apply font-serif text-white italic text-lg text-center;
+  }
+
+  .bottom__title {
+    @apply w-full text-center text-armyGreen font-handwrite py-5
+		<sm:(text-7xl)
+		xl:(text-5xl);
+  }
+
+  .bottom__text {
+    @apply font-serif text-grayWeb text-center pt-6;
+  }
+
+  .separator {
+    @apply flex flex-no-wrap;
+  }
+
+  .separator > div {
+    @apply w-1/2;
+  }
+
+  .bottom__rrss {
+    @apply w-full flex justify-center pt-8;
+  }
+
+  .bottom__link {
+    @apply w-6 rounded-full bg-armyGreen text-goldMedium p-2;
+  }
+</style>
