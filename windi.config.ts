@@ -34,9 +34,9 @@ export default defineConfig({
         body: "#d6d6d6",
       },
       backgroundImage: {
-        containerBg: "url('/src/assets/images/lbg-bg.webp')",
-        logo: "url('/src/assets/images/lbg-logo.svg')",
-        patternBg: "url('/src/assets/images/lbg-patron.svg')",
+        containerBg: "url('/images/lbg-bg.webp')",
+        logo: "url('/images/lbg-logo.svg')",
+        patternBg: "url('/images/lbg-patron.svg')",
       },
     },
   },

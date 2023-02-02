@@ -75,17 +75,15 @@ import AppSeparator from "../components/app-separator.astro";
 .bottom__title {
   @apply w-full text-center text-armyGreen font-handwrite 
   <sm:(text-4xl my-5)
-  xl:(text-5xl py-5);
+  xl:(text-5xl my-10);
 }
 
 .bottom__text {
   @apply font-serif text-grayWeb text-center
-  <sm:(p-2)
-  xl:(pt-6);
-}
+  <sm:(p-2)}
 
 .separator {
-  @apply flex flex-no-wrap;
+  @apply flex justify-center;
 }
 
 .separator > div {
@@ -93,7 +91,9 @@ import AppSeparator from "../components/app-separator.astro";
 }
 
 .bottom__rrss {
-  @apply w-full flex justify-center pt-8;
+  @apply w-full flex justify-center
+  <sm:(pt-8)
+  xl:(pt-4);
 }
 
 .bottom__link {
