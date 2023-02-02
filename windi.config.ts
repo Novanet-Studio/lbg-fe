@@ -21,6 +21,7 @@ export default defineConfig({
         goldDark: "#ba9211",
         goldMedium: "#e1c278",
         goldLight: "#faefb1",
+        babyPower: "#fffcf6",
       },
       textColor: {
         armyGreen: "#2E3B00",
