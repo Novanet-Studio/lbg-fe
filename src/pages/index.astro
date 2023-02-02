@@ -30,64 +30,76 @@ import AppSeparator from "../components/app-separator.astro";
       </p>
     </div>
     <div class="bottom__rrss">
-			<a href="https://www.instagram.com/lebistrotgourmet_ccs/" target="_blank">
-      <Icon class="bottom__link" name="mdi:instagram" />
-		</a>
+      <a href="https://www.instagram.com/lebistrotgourmet_ccs/" target="_blank">
+        <Icon class="bottom__link" name="mdi:instagram" />
+      </a>
     </div>
   </main>
 </Layout>
 
 <style>
-	
-  .top {
-    @apply flex flex-col mx-auto bg-armyGreen px-12 pt-8 pb-8 box-content
-		<sm:(w-2/3);
-  }
 
-  .top__pattern {
-    @apply bg-patternBg bg-repeat;
-  }
+.top {
+  @apply flex flex-col mx-auto bg-armyGreen  box-content
+  <sm:(mx-8 px-6 py-6)
+  xl:(w-2/4 px-12 py-8);
+}
 
-  .top__wrapper {
-    border-image: linear-gradient(#ba9211, #faefb1) 45;
-    border-width: 1px;
-    border-style: solid;
-    padding: 2rem 0 2rem 0;
-  }
+.top__pattern {
+  @apply bg-patternBg bg-repeat;
+}
 
-  .top__logo {
-    @apply mx-auto bg-logo bg-auto bg-top bg-no-repeat bg-contain py-24
-		<sm:(w-102)
-		xl:(w-[48%]);
-  }
+.top__wrapper {
+  border-image: linear-gradient(#ba9211, #faefb1) 45;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2rem 0 2rem 0;
+}
 
-  .top__slogan {
-    @apply font-serif text-white italic text-lg text-center;
-  }
+.top__logo {
+  @apply mx-auto bg-logo bg-auto bg-top bg-no-repeat bg-contain 
+  <sm:(w-56 pb-24)
+  xl:(w-[48%] py-24);
+}
 
-  .bottom__title {
-    @apply w-full text-center text-armyGreen font-handwrite py-5
-		<sm:(text-7xl)
-		xl:(text-5xl);
-  }
+.top__slogan {
+  @apply <sm:(mx-4 pt-6 );
+}
 
-  .bottom__text {
-    @apply font-serif text-grayWeb text-center pt-6;
-  }
+.top__slogan p {
+  @apply font-serif text-white italic text-center
+  <sm:(text-sm)
+  xl:(text-lg)
+}
 
-  .separator {
-    @apply flex flex-no-wrap;
-  }
+.bottom__title {
+  @apply w-full text-center text-armyGreen font-handwrite 
+  <sm:(text-4xl my-5)
+  xl:(text-5xl py-5);
+}
 
-  .separator > div {
-    @apply w-1/2;
-  }
+.bottom__text {
+  @apply font-serif text-grayWeb text-center
+  <sm:(p-2)
+  xl:(pt-6);
+}
 
-  .bottom__rrss {
-    @apply w-full flex justify-center pt-8;
-  }
+.separator {
+  @apply flex flex-no-wrap;
+}
 
-  .bottom__link {
-    @apply w-6 rounded-full bg-armyGreen text-goldMedium p-2;
-  }
+.separator > div {
+  @apply w-1/2;
+}
+
+.bottom__rrss {
+  @apply w-full flex justify-center pt-8;
+}
+
+.bottom__link {
+  @apply rounded-full bg-armyGreen text-goldMedium
+  <sm:(w-5 p-1)
+  xl:(w-6 p-2);
+}
+  
 </style>

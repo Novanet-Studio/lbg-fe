@@ -1,0 +1,31 @@
+
+
+  * {
+    @apply p-0 m-0;  
+  }
+  
+  html {
+    text-base
+  }
+  
+  body {
+    @apply font-serif bg-white p-0 m-0;
+    font-kerning: normal;
+    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    text-rendering: optimizeLegibility;
+  }
+  
+  .container {
+    @apply  bg-containerBg bg-bottom bg-contain bg-no-repeat overflow-auto
+    <sm:()
+    xl:(min-h-screen);
+  }
+  
+  main {
+    @apply container mx-auto
+    <sm:()
+    xl:( w-180);
+  }

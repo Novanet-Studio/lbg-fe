@@ -4,6 +4,8 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+
 ---
 
 <!DOCTYPE html>
@@ -32,24 +34,34 @@ const { title } = Astro.props;
   </body>
 </html>
 
-<style is:global>
+<style>
+
   * {
-    @apply m-0 p-0;
+    @apply p-0 m-0;  
   }
-
+  
   html {
-    @apply font-serif bg-white;
+    text-base
   }
-
+  
   body {
-    @apply p-0 m-0;
+    @apply font-serif bg-white p-0 m-0;
+    font-kerning: normal;
+    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    text-rendering: optimizeLegibility;
   }
-
+  
   .container {
-    @apply flex flex-col min-h-[100vh] bg-containerBg bg-bottom bg-contain bg-no-repeat;
-  }
+    @apply min-h-screen bg-containerBg bg-bottom bg-contain bg-no-repeat overflow-auto
 
+  }
+  
   main {
-    @apply w-180 container mx-auto;
+    @apply container mx-auto
+    <sm:()
+    xl:(w-180);
   }
 </style>
