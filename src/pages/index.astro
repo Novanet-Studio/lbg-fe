@@ -30,7 +30,26 @@ import AppSeparator from "../components/app-separator.astro";
       </p>
     </div>
     <div class="bottom__rrss">
-      <a href="https://www.instagram.com/lebistrotgourmet_ccs/" target="_blank">
+      <div>
+        <a href="https://maps.app.goo.gl/akbqnk4qQkjsZxXe7" target="_blank">
+          <Icon class="bottom__link" name="mdi:map-marker" />
+        </a>
+        <p class="bottom__text">
+          Dirección: A pie de calle, Avenida Tamanaco, Centro Empresarial
+          Galipán Torre Galipán, Caracas 1060, Miranda, Venezuela.<br />
+          <a
+            class="bottom__anchor"
+            href="https://maps.app.goo.gl/akbqnk4qQkjsZxXe7"
+            >Abrir en Google Maps</a
+          >
+        </p>
+      </div>
+      <div>
+        <Icon class="bottom__link" name="mdi:information" />
+
+        <p class="bottom__text">Información y reservaciones: +58 412-5945339</p>
+      </div>
+      <a href="https://www.instagram.com/lebistrotccs/" target="_blank">
         <Icon class="bottom__link" name="mdi:instagram" />
       </a>
     </div>
@@ -38,68 +57,70 @@ import AppSeparator from "../components/app-separator.astro";
 </Layout>
 
 <style>
-
-.top {
-  @apply flex flex-col mx-auto bg-armyGreen  box-content
+  .top {
+    @apply flex flex-col mx-auto bg-armyGreen  box-content
   <sm:(mx-8 px-6 py-6)
   xl:(w-2/4 px-12 py-8);
-}
+  }
 
-.top__pattern {
-  @apply bg-patternBg bg-repeat;
-}
+  .top__pattern {
+    @apply bg-patternBg bg-repeat;
+  }
 
-.top__wrapper {
-  border-image: linear-gradient(#ba9211, #faefb1) 45;
-  border-width: 1px;
-  border-style: solid;
-  padding: 2rem 0 2rem 0;
-}
+  .top__wrapper {
+    border-image: linear-gradient(#ba9211, #faefb1) 45;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2rem 0 2rem 0;
+  }
 
-.top__logo {
-  @apply mx-auto bg-logo bg-auto bg-top bg-no-repeat bg-contain 
+  .top__logo {
+    @apply mx-auto bg-logo bg-auto bg-top bg-no-repeat bg-contain 
   <sm:(w-56 pb-24)
   xl:(w-[48%] py-24);
-}
+  }
 
-.top__slogan {
-  @apply <sm:(mx-4 pt-6 );
-}
+  .top__slogan {
+    @apply <sm:(mx-4 pt-6 );
+  }
 
-.top__slogan p {
-  @apply font-serif text-white italic text-center
+  .top__slogan p {
+    @apply font-serif text-white italic text-center
   <sm:(text-sm)
-  xl:(text-lg)
-}
+  xl:(text-lg);
+  }
 
-.bottom__title {
-  @apply w-full text-center text-armyGreen font-handwrite 
+  .separator {
+    @apply flex justify-center pb-2;
+  }
+
+  .separator > div {
+    @apply w-1/2;
+  }
+
+  .bottom__rrss {
+    @apply w-full flex flex-col text-center justify-center
+  <sm:(pt-8)
+  xl:(pt-4 pb-8);
+  }
+
+  .bottom__title {
+    @apply w-full text-center text-armyGreen font-handwrite 
   <sm:(text-4xl my-5)
   xl:(text-5xl my-10);
-}
+  }
 
-.bottom__text {
-  @apply font-serif text-grayWeb text-center
-  <sm:(p-2)}
+  .bottom__text {
+    @apply font-serif text-grayWeb text-center mt-1 pb-3;
+  }
 
-.separator {
-  @apply flex justify-center;
-}
+  .bottom__anchor {
+    @apply leading-loose leading-loose no-underline text-armyGreen;
+  }
 
-.separator > div {
-  @apply w-1/2;
-}
-
-.bottom__rrss {
-  @apply w-full flex justify-center
-  <sm:(pt-8)
-  xl:(pt-4);
-}
-
-.bottom__link {
-  @apply rounded-full bg-armyGreen text-goldMedium
-  <sm:(w-5 p-1)
+  .bottom__link {
+    @apply rounded-full bg-armyGreen text-goldMedium
+  <sm:(w-5 p-2)
   xl:(w-6 p-2);
-}
-  
+  }
 </style>

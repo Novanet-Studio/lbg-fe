@@ -29,3 +29,8 @@
     <sm:()
     xl:( w-180);
   }
+
+  .bottom__rrss {
+   @apply flex flex-col justify-content
+  }
+
